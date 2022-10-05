@@ -1,0 +1,428 @@
+
+PARTE 1 TAMBÉM FOI REALIZADA, MAS O CÓDIGO ACABOU NÃO SENDO SALVO. PARTE 2 PODE SER ENCONTRADA NA PASTA.
+
+O jogo dos gatos
+Uma vez meu amigo Paulo estava no Japão e ele resolveu ir em um desses tais de "Neko Café"
+para saber como que funciona. Obviamente ele sabiaque iria encontrar café e gatos (provavelmente muitos gatos).
+
+Porém ele achou estranho que haviam dois gatos em uma mesa com cartas em suas mãos.
+Ele nunca viu gatos jogarem cartas na vida, até achou que estava sonhando. Porém havia pessoas assistindo
+o jogo como se aquilo fosse algo super normal naquele ambiente.
+
+Ele surpreso foi perguntar para uma pessoa de lá como o jogo funcionava e ela disse o seguinte:
+
+Antes do jogo começar, eles dividem as cartas para que cada gato tenha seu
+próprio baralho (o input do problema). Então, o jogo consiste em
+uma série de rodadas: ambos os "jogadores" tiram sua carta do topo e o
+jogador com a carta de maior valor ganha a rodada. O vencedor fica com as
+duas cartas, colocando-as no fundo de seu próprio baralho, de modo que a carta do vencedor fique acima da outra.
+
+Se isso fizer com que um jogador tenha todas as cartas, ele vence e o jogo termina.
+
+Por exemplo, considere os seguintes decks iniciais:
+
+Player 1:
+9
+2
+6
+3
+1
+
+Player 2:
+5
+8
+4
+7
+10
+
+Essa disposição significa que o baralho do jogador 1 contém 5 cartas,
+com um "9" em cima e um "1" embaixo; o baralho do jogador 2 também contém 5 cartas,
+sendo o "5" a primeira carta e "10" a última.
+
+A primeira rodada começa com ambos os jogadores comprando a carta do topo
+de seus baralhos: 9 e 5. O jogador 1 tem a carta mais alta, então ambas as cartas
+se movem para o fundo do baralho do jogador 1, onde que o "9" fique acima do "5".
+No total, são necessárias 29 rodadas antes que um jogador tenha todas as cartas:
+
+-- Round 1 --
+Player 1's deck: 9, 2, 6, 3, 1
+Player 2's deck: 5, 8, 4, 7, 10
+Player 1 plays: 9
+Player 2 plays: 5
+Player 1 wins the round!
+
+-- Round 2 --
+Player 1's deck: 2, 6, 3, 1, 9, 5
+Player 2's deck: 8, 4, 7, 10
+Player 1 plays: 2
+Player 2 plays: 8
+Player 2 wins the round!
+
+-- Round 3 --
+Player 1's deck: 6, 3, 1, 9, 5
+Player 2's deck: 4, 7, 10, 8, 2
+Player 1 plays: 6
+Player 2 plays: 4
+Player 1 wins the round!
+
+-- Round 4 --
+Player 1's deck: 3, 1, 9, 5, 6, 4
+Player 2's deck: 7, 10, 8, 2
+Player 1 plays: 3
+Player 2 plays: 7
+Player 2 wins the round!
+
+-- Round 5 --
+Player 1's deck: 1, 9, 5, 6, 4
+Player 2's deck: 10, 8, 2, 7, 3
+Player 1 plays: 1
+Player 2 plays: 10
+Player 2 wins the round!
+
+...muitos rounds se passam...
+
+-- Round 27 --
+Player 1's deck: 5, 4, 1
+Player 2's deck: 8, 9, 7, 3, 2, 10, 6
+Player 1 plays: 5
+Player 2 plays: 8
+Player 2 wins the round!
+
+-- Round 28 --
+Player 1's deck: 4, 1
+Player 2's deck: 9, 7, 3, 2, 10, 6, 8, 5
+Player 1 plays: 4
+Player 2 plays: 9
+Player 2 wins the round!
+
+-- Round 29 --
+Player 1's deck: 1
+Player 2's deck: 7, 3, 2, 10, 6, 8, 5, 9, 4
+Player 1 plays: 1
+Player 2 plays: 7
+Player 2 wins the round!
+
+
+== Post-game results ==
+Player 1's deck: 
+Player 2's deck: 3, 2, 10, 6, 8, 5, 9, 4, 7, 1
+
+Quando o jogo terminar, você poderá calcular a pontuação do jogador vencedor.
+A carta de baixo do baralho vale o valor da carta multiplicada por 1,
+a segunda carta de baixo vale o valor da carta multiplicada por 2 e assim por diante.
+Com 10 cartas, a carta de cima vale o valor da carta multiplicado por 10.
+Neste exemplo, a pontuação do jogador vencedor é:
+
+   3 * 10
++  2 *  9
++ 10 *  8
++  6 *  7
++  8 *  6
++  5 *  5
++  9 *  4
++  4 *  3
++  7 *  2
++  1 *  1
+= 306
+
+Assim, uma vez que o jogo termina, a pontuação do jogador vencedor é 306!!
+
+Então, para seu input: Qual é a pontuação do jogador vencedor?
+
+PARTE 1 FOI REALIZADA, MAS O CÓDIGO ACABOU NÃO SENDO SALVO. PARTE 2 PODE SER ENCONTRADA NA PASTA.
+
+O jogo dos gatos parte 2
+Ao final do jogo, Paulo viu outra mesa com outros gatos jogando um jogo parecido.
+Porém eles tinham um relógio ao lado deles com os ponteiros completamente diferentes
+que, se observado com calma, giravam de um jeito não tão normal.....
+
+Os gatos as vezes pareciam que voltavam no tempo junto com suas cartas.
+Paulo novamente perguntou para outra pessoa sobre o que se tratava aquela coisa
+(Paulo já achava que estava em Saturno, e não em um Neko Café no Japão)
+E uma pessoa respondeu que se tratava do mesmo jogo que ele havia acabado de presenciar
+porém na sua versão recursiva.
+
+O Combate Recursivo ainda começa dividindo as cartas em dois baralhos
+Então, o jogo consiste em uma série de rodadas com algumas mudanças:
+
+* Antes de qualquer jogador distribuir uma carta, se houve uma rodada
+anterior neste jogo que tinha exatamente as mesmas cartas na mesma
+ordem nos baralhos dos mesmos jogadores, o jogo termina instantaneamente
+com uma vitória para o jogador 1.
+As rodadas anteriores de outros jogos são não considerado.
+(Isso evita jogos infinitos de Combate Recursivo, o que todos concordam ser uma má ideia.)
+
+* Caso contrário, as cartas desta rodada devem estar em uma nova configuração;
+os jogadores começam a rodada cada um comprando a carta do topo de seu baralho normalmente.
+
+* Se ambos os jogadores tiverem pelo menos tantas cartas restantes em seu baralho quanto o
+valor da carta que acabaram de comprar, o vencedor da rodada é determinado jogando uma nova
+partida de Combate Recursivo (veja abaixo).
+
+* Caso contrário, pelo menos um jogador não deve ter cartas suficientes em seu baralho para recorrer;
+o vencedor da rodada é o jogador com a carta de maior valor.
+
+Aqui está um exemplo de um pequeno jogo que faria um loop para sempre sem a regra de prevenção de jogo infinito:
+
+Player 1:
+43
+19
+
+Player 2:
+2
+29
+14
+
+Durante uma rodada de Combate Recursivo, se ambos os jogadores tiverem pelo menos tantas cartas em seus
+próprios baralhos quanto o número da carta que acabaram de distribuir, o vencedor da rodada é determinado
+recorrendo a um sub-jogo de Combate Recursivo. (Por exemplo, se o jogador 1 comprar a carta "3" e o jogador 2
+comprar a carta "7", isso ocorreria se o jogador 1 tiver pelo menos 3 cartas restantes e o jogador 2 tiver pelo
+menos 7 cartas restantes, sem contar as 3e as 7cartas que foram compradas.)
+
+Para jogar um sub-jogo de Combate Recursivo, cada jogador cria um novo baralho fazendo uma cópia das próximas
+cartas do seu baralho (a quantidade de cartas copiadas é igual ao número da carta que eles compraram para acionar o sub-jogo).
+Durante este subjogo, o jogo que o acionou está em espera e completamente inalterado; nenhuma carta é removida dos baralhos dos
+jogadores para formar o subjogo. (Por exemplo, se o jogador 1 comprou a carta "3", seu baralho no subjogo seria cópias das próximas
+três cartas em seu baralho.)
+
+Aqui está um exemplo completo de jogabilidade, onde o "Game 1" é o jogo principal de Combate Recursivo:
+
+=== Game 1 ===
+
+-- Round 1 (Game 1) --
+Player 1's deck: 9, 2, 6, 3, 1
+Player 2's deck: 5, 8, 4, 7, 10
+Player 1 plays: 9
+Player 2 plays: 5
+Player 1 wins round 1 of game 1!
+
+-- Round 2 (Game 1) --
+Player 1's deck: 2, 6, 3, 1, 9, 5
+Player 2's deck: 8, 4, 7, 10
+Player 1 plays: 2
+Player 2 plays: 8
+Player 2 wins round 2 of game 1!
+
+-- Round 3 (Game 1) --
+Player 1's deck: 6, 3, 1, 9, 5
+Player 2's deck: 4, 7, 10, 8, 2
+Player 1 plays: 6
+Player 2 plays: 4
+Player 1 wins round 3 of game 1!
+
+-- Round 4 (Game 1) --
+Player 1's deck: 3, 1, 9, 5, 6, 4
+Player 2's deck: 7, 10, 8, 2
+Player 1 plays: 3
+Player 2 plays: 7
+Player 2 wins round 4 of game 1!
+
+-- Round 5 (Game 1) --
+Player 1's deck: 1, 9, 5, 6, 4
+Player 2's deck: 10, 8, 2, 7, 3
+Player 1 plays: 1
+Player 2 plays: 10
+Player 2 wins round 5 of game 1!
+
+-- Round 6 (Game 1) --
+Player 1's deck: 9, 5, 6, 4
+Player 2's deck: 8, 2, 7, 3, 10, 1
+Player 1 plays: 9
+Player 2 plays: 8
+Player 1 wins round 6 of game 1!
+
+-- Round 7 (Game 1) --
+Player 1's deck: 5, 6, 4, 9, 8
+Player 2's deck: 2, 7, 3, 10, 1
+Player 1 plays: 5
+Player 2 plays: 2
+Player 1 wins round 7 of game 1!
+
+-- Round 8 (Game 1) --
+Player 1's deck: 6, 4, 9, 8, 5, 2
+Player 2's deck: 7, 3, 10, 1
+Player 1 plays: 6
+Player 2 plays: 7
+Player 2 wins round 8 of game 1!
+
+-- Round 9 (Game 1) --
+Player 1's deck: 4, 9, 8, 5, 2
+Player 2's deck: 3, 10, 1, 7, 6
+Player 1 plays: 4
+Player 2 plays: 3
+Playing a sub-game to determine the winner...
+
+=== Game 2 ===
+
+-- Round 1 (Game 2) --
+Player 1's deck: 9, 8, 5, 2
+Player 2's deck: 10, 1, 7
+Player 1 plays: 9
+Player 2 plays: 10
+Player 2 wins round 1 of game 2!
+
+-- Round 2 (Game 2) --
+Player 1's deck: 8, 5, 2
+Player 2's deck: 1, 7, 10, 9
+Player 1 plays: 8
+Player 2 plays: 1
+Player 1 wins round 2 of game 2!
+
+-- Round 3 (Game 2) --
+Player 1's deck: 5, 2, 8, 1
+Player 2's deck: 7, 10, 9
+Player 1 plays: 5
+Player 2 plays: 7
+Player 2 wins round 3 of game 2!
+
+-- Round 4 (Game 2) --
+Player 1's deck: 2, 8, 1
+Player 2's deck: 10, 9, 7, 5
+Player 1 plays: 2
+Player 2 plays: 10
+Player 2 wins round 4 of game 2!
+
+-- Round 5 (Game 2) --
+Player 1's deck: 8, 1
+Player 2's deck: 9, 7, 5, 10, 2
+Player 1 plays: 8
+Player 2 plays: 9
+Player 2 wins round 5 of game 2!
+
+-- Round 6 (Game 2) --
+Player 1's deck: 1
+Player 2's deck: 7, 5, 10, 2, 9, 8
+Player 1 plays: 1
+Player 2 plays: 7
+Player 2 wins round 6 of game 2!
+The winner of game 2 is player 2!
+
+...anyway, back to game 1.
+Player 2 wins round 9 of game 1!
+
+-- Round 10 (Game 1) --
+Player 1's deck: 9, 8, 5, 2
+Player 2's deck: 10, 1, 7, 6, 3, 4
+Player 1 plays: 9
+Player 2 plays: 10
+Player 2 wins round 10 of game 1!
+
+-- Round 11 (Game 1) --
+Player 1's deck: 8, 5, 2
+Player 2's deck: 1, 7, 6, 3, 4, 10, 9
+Player 1 plays: 8
+Player 2 plays: 1
+Player 1 wins round 11 of game 1!
+
+-- Round 12 (Game 1) --
+Player 1's deck: 5, 2, 8, 1
+Player 2's deck: 7, 6, 3, 4, 10, 9
+Player 1 plays: 5
+Player 2 plays: 7
+Player 2 wins round 12 of game 1!
+
+-- Round 13 (Game 1) --
+Player 1's deck: 2, 8, 1
+Player 2's deck: 6, 3, 4, 10, 9, 7, 5
+Player 1 plays: 2
+Player 2 plays: 6
+Playing a sub-game to determine the winner...
+
+=== Game 3 ===
+
+-- Round 1 (Game 3) --
+Player 1's deck: 8, 1
+Player 2's deck: 3, 4, 10, 9, 7, 5
+Player 1 plays: 8
+Player 2 plays: 3
+Player 1 wins round 1 of game 3!
+
+-- Round 2 (Game 3) --
+Player 1's deck: 1, 8, 3
+Player 2's deck: 4, 10, 9, 7, 5
+Player 1 plays: 1
+Player 2 plays: 4
+Playing a sub-game to determine the winner...
+
+=== Game 4 ===
+
+-- Round 1 (Game 4) --
+Player 1's deck: 8
+Player 2's deck: 10, 9, 7, 5
+Player 1 plays: 8
+Player 2 plays: 10
+Player 2 wins round 1 of game 4!
+The winner of game 4 is player 2!
+
+...anyway, back to game 3.
+Player 2 wins round 2 of game 3!
+
+-- Round 3 (Game 3) --
+Player 1's deck: 8, 3
+Player 2's deck: 10, 9, 7, 5, 4, 1
+Player 1 plays: 8
+Player 2 plays: 10
+Player 2 wins round 3 of game 3!
+
+-- Round 4 (Game 3) --
+Player 1's deck: 3
+Player 2's deck: 9, 7, 5, 4, 1, 10, 8
+Player 1 plays: 3
+Player 2 plays: 9
+Player 2 wins round 4 of game 3!
+The winner of game 3 is player 2!
+
+...anyway, back to game 1.
+Player 2 wins round 13 of game 1!
+
+-- Round 14 (Game 1) --
+Player 1's deck: 8, 1
+Player 2's deck: 3, 4, 10, 9, 7, 5, 6, 2
+Player 1 plays: 8
+Player 2 plays: 3
+Player 1 wins round 14 of game 1!
+
+-- Round 15 (Game 1) --
+Player 1's deck: 1, 8, 3
+Player 2's deck: 4, 10, 9, 7, 5, 6, 2
+Player 1 plays: 1
+Player 2 plays: 4
+Playing a sub-game to determine the winner...
+
+=== Game 5 ===
+
+-- Round 1 (Game 5) --
+Player 1's deck: 8
+Player 2's deck: 10, 9, 7, 5
+Player 1 plays: 8
+Player 2 plays: 10
+Player 2 wins round 1 of game 5!
+The winner of game 5 is player 2!
+
+...anyway, back to game 1.
+Player 2 wins round 15 of game 1!
+
+-- Round 16 (Game 1) --
+Player 1's deck: 8, 3
+Player 2's deck: 10, 9, 7, 5, 6, 2, 4, 1
+Player 1 plays: 8
+Player 2 plays: 10
+Player 2 wins round 16 of game 1!
+
+-- Round 17 (Game 1) --
+Player 1's deck: 3
+Player 2's deck: 9, 7, 5, 6, 2, 4, 1, 10, 8
+Player 1 plays: 3
+Player 2 plays: 9
+Player 2 wins round 17 of game 1!
+The winner of game 1 is player 2!
+
+
+== Post-game results ==
+Player 1's deck: 
+Player 2's deck: 7, 5, 6, 2, 4, 1, 10, 8, 9, 3
+
+Após o jogo, a pontuação do jogador vencedor é calculada a partir das cartas que ele possui em seu baralho original,
+usando as mesmas regras do Combate normal. No jogo acima, a pontuação do jogador vencedor é 291.
+
+Então, em um jogo de Combate Recursivo usando os mesmos dois baralhos de antes (seu input): Qual é a pontuação do jogador vencedor?
