@@ -1,0 +1,68 @@
+PARTE 1:
+
+Inimigos de Jorge
+Eu, você e meu amigo Jorge fomos pra Korea.
+O jorge sempre quis ir pra lá, ele faz gastronomia e sempre quis aprender a fazer as comidas
+mais exóticas da Ásia.
+
+Assim nosso amigo Faker deu uma lista,
+cada linha dessa lista é uma lista de igredientes que pode ser usado em algumas receitas.
+Porém jorge é alérgico a várias coisas e precisa descobrir qual desses igredientes ele não pode usar.
+
+Infelizmente a lista de igredientes está em koreano e Jorge não sabe ler koreano, então a casa caiu :(
+No entanto, às vezes, os alérgenos são listados em um idioma que nós entedemos :)
+
+Você deve ser capaz de usar essas informações para determinar qual ingrediente contém qual alérgeno
+e descobrir quais alimentos são seguros para fazer as comidas legais.
+
+Lembrando que cada linha inclui a lista de ingredientes dessa receita 
+seguida por ALGUNS OU TODOS os alérgenos que a receita contém.
+
+Cada alérgeno é encontrado em exatamente um ingrediente.
+Cada ingrediente contém zero ou um alérgeno.
+Os alérgenos nem sempre são marcados; quando eles estiverem listados
+(como "(contains nuts, shellfish)" após uma lista de ingredientes),
+o ingrediente que contém cada alérgeno listado estará em algum lugar na lista de ingredientes correspondente.
+No entanto, mesmo que um alérgeno não esteja listado, o ingrediente que contém esse alérgeno ainda pode estar presente:
+talvez eles tenham esquecido de rotulá-lo ou talvez tenha sido rotulado em um idioma que você não conhece (em koreano no caso).
+
+Por exemplo, considere a seguinte lista de alimentos:
+
+mxmxvkd kfcds sqjhc nhms (contains dairy, fish)
+trh fvjkl sbzzf mxmxvkd (contains dairy)
+sqjhc fvjkl (contains soy)
+sqjhc mxmxvkd sbzzf (contains fish)
+
+A primeira receita da lista tem quatro ingredientes
+(escritos em um idioma que você não entende): "mxmxvkd", "kfcds", "sqjhc", e "nhms".
+Embora o alimento possa conter outros alérgenos, alguns alérgenos que a receita definitivamente contém são listados posteriormente: "dairy" e "fish".
+
+O primeiro passo é determinar quais ingredientes não podem conter nenhum dos alérgenos em qualquer receita da sua lista.
+No exemplo acima, nenhum dos ingredientes "kfcds", "nhms", "sbzzf", ou "trhpode" podem conter um alérgeno.
+Após isso você deve contar o número de vezes que qualquer um desses ingredientes aparece em qualquer lista de ingredientes.
+No caso acima, se feito isso, será produzido o número 5: pois todos eles aparecem uma vez cada, exceto "sbzzf", que aparece duas vezes.
+
+Determine quais ingredientes não podem conter nenhum dos alérgenos em sua lista.
+Então, para o seu input: Quantas vezes algum desses ingredientes aparece?
+
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////Quantas
+
+PARTE 2:
+
+Inimigos de Jorge parte 2
+Agora que você isolou os ingredientes koreanos malvados que podem ser letais a Jorge,
+você deve ter informações suficientes para descobrir qual ingrediente contém qual alérgeno.
+
+No exemplo da primeira parte ficaria:
+
+"mxmxvkd" contém "dairy".
+"sqjhc" contém "fish".
+"fvjkl" contém "soy".
+
+Organize os ingredientes em ordem alfabética
+por seu ALÉRGENO e separe-os por vírgulas para produzir sua lista canônica de ingredientes perigosos.
+(Não deve haver espaços em sua lista canônica de ingredientes perigosos.)
+No exemplo acima, isso seria "mxmxvkd,sqjhc,fvjkl".
+
+Então, para seu input: Qual é a sua lista canônica de ingredientes perigosos?
