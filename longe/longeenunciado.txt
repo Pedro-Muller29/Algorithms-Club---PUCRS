@@ -1,0 +1,62 @@
+O homenzinho foi longe demais
+"""
+Com a criação do maldito "Fundidor de universos" (obrigado Wagner e seu TCC por destruir o universo....) foi divertido ver os Robins Hoods roubando pratos de massa um dos outros igual uns abobados.
+Porém na "fundição" obviamente não foi só eles que se encontraram, mas sim todo o seu sistema solar. Agora estamos com diversas estrelas duplicadas :(
+Graças ao meu dinheiro eu consegui fazer um telescópio ultra tecnológico. E com ele é possível ver toda a lambança gerada.
+Assim, é possível enxergar todos os sóis então é possível enxergar o "centro" de cada sistema solar.
+De acordo com meus astronomos, para definir a qual universo uma estrela pertence, basta ver qual universo se encontra mais perto dela.
+Eu não sei nada sobre estrelas então vou dar um exemplo vindo dos meus astrônomos....
+
+Com o telescópio eles conseguiram as coordenadas de cada sol, como por exemplo essa abaixo:
+
+1, 1
+1, 6
+8, 3
+3, 4
+5, 5
+8, 9
+
+Assim, arrumando o telescópio para enxergar todos os sóis a gente teria mais ou menos essa visão:
+
+..........
+.A........
+..........
+........C.
+...D......
+.....E....
+.B........
+..........
+..........
+........F.
+
+Os pontinhos seriam alguma estrela qualquer, assim eu preciso saber qual estrela pertence a qual sistema solar. Isso porque
+eu quero descobrir qual é o maior sistema solar finito, para que eu e meus físicos possamos tentar reverter a meleca que foi feita.
+
+MUITO IMPORTANTE:
+Lembrando que esse exemplo é apenas um "corte" no universo, ou seja, é um pedaço que meu telescópio está mostrando. Se tu diminuir o zoom do telescópio infinitamente aparecerá sempre infinitas estrelas.
+Assim essas precisam pertencer a algum sol, por isso há alguns sistemas solares com infinitas estrelas (e esses eu acho que por hora não tem o que fazer, o estrago foi muito grande...).
+Então novamente: Vamos tentar consertar os sistemas solares finitos (no caso o maior deles para a gente se livrar dele logo).
+
+Ah sim, a resposta do nosso caso exemplo ficaria assim:
+
+aaaaa.cccc
+aAaaa.cccc
+aaaddecccc
+aadddeccCc
+..dDdeeccc	
+bb.deEeecc
+bBb.eeee..
+bbb.eeefff
+bbb.eeffff
+bbb.ffffFf
+
+Então o maior sistema solar finito seria o "E" com tamanho 17 (onde tem "." é porque a menor distância daquela estrela é igual para 2 ou mais universos, então a gente não sabe a quem atribuí-lo).
+Portanto: Qual é o tamanho do maior sistema solar finito? Eu ia descobrir sozinho o número, mas estou indo ver a situação da compra do Twitter (acho que isso é mais importante do que o universo).
+Conto com vocês ;)
+
+MUITO IMPORTANTE 2:
+Para o cálculo das distâncias use a distância de Manhattan (não me pergunta o porque).
+
+"""
+
+-- Elon Musk
