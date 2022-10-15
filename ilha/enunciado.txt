@@ -1,0 +1,83 @@
+Ilha da matemática
+Eu e meu amigo Knuth sempre tínhamos um objetivo em comum: Achar a ilha da matemática
+(aquela que o pato Donald uma vez visitou, a aventura dele deve estar documentada no Youtube...)
+
+Até que algum dia eu achei as instruções para chegar lá!
+Então nós pegamos o barco da Penny e seguimos as instruções.
+
+As instruções de navegação (seu input) consistem em uma sequência de ações de caractere único emparelhadas com valores de entrada inteiros.
+Depois de olhar para eles por alguns minutos, você descobre o que eles provavelmente significam:
+
+"N" significa mover-se para o norte pelo valor dado.
+"S" significa mover-se para o sul pelo valor dado.
+"E" significa mover-se para o leste pelo valor dado.
+"W" significa mover-se para oeste pelo valor dado.
+"L" significa virar à esquerda um determinado número de graus.
+"R" significa virar à direita um determinado número de graus.
+"F" significa avançar pelo valor dado na direção em que o navio está voltado.
+O navio começa voltado para o leste. Apenas as ações "L" e "R" mudam a direção para a qual o navio está voltado.
+(Ou seja, se o navio estiver voltado para o leste e a próxima instrução for N10, o navio se moveria 10 unidades para o norte,
+mas ainda se moveria para o leste se a ação seguinte fosse F.)
+
+Por exemplo, se o seu input fosse este abaixo:
+
+F10
+N3
+F7
+R90
+F11
+
+Essas instruções seriam tratadas da seguinte forma:
+
+F10 moveria o navio 10 unidades para leste (porque o navio começa voltado para o leste) para leste 10, norte 0.
+N3 moveria o navio 3 unidades de norte para leste 10, norte 3.
+F7 moveria o navio mais 7 unidades para leste (porque o navio ainda está voltado para leste) para leste 17, norte 3.
+R90 faria com que o navio virasse à direita 90 graus e ficasse virado para o sul; permanece a leste 17, norte 3.
+F11 moveria o navio 11 unidades sul para leste 17, sul 8.
+Ao final dessas instruções, a distância de Manhattan do navio
+(soma dos valores absolutos de sua posição leste/oeste e sua posição norte/sul) a partir de sua posição inicial é 17 + 8 = 25.
+
+Descubra onde as instruções de navegação levam.
+Então, para o seu input: Qual é a distância de Manhattan entre esse local e a posição inicial do navio?
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+PARTE 2:
+
+Ilha da matemática parte 2
+Antes que pudesse dar o destino ao Knuth,
+eu percebo que os significados reais da ação foram impressos no verso da folha esse tempo todo....
+
+Quase todas as ações indicam como mover um waypoint relativo à posição do navio (e não o barco em si):
+
+"N" significa mover o waypoint para o norte pelo valor dado.
+"S" significa mover o waypoint para o sul pelo valor dado.
+"E" significa mover o waypoint para leste pelo valor dado.
+"W" significa mover o waypoint para oeste pelo valor dado.
+"L" significa girar o waypoint ao redor do navio para a esquerda ( no sentido anti-horário ) o número determinado de graus.
+"R" significa girar o waypoint ao redor do navio para a direita ( no sentido horário ) o número determinado de graus.
+"F" significa avançar até o waypoint um número de vezes igual ao valor dado.
+
+O waypoint começa 10 unidades a leste e 1 unidade ao norte em relação ao navio.
+O waypoint é relativo ao navio; isto é, se o navio se move, o waypoint se move com ele.
+
+Por exemplo, usando as mesmas instruções acima:
+
+F10 move o navio para o waypoint 10 vezes (um total de 100 unidades leste e 10 unidades norte ), deixando o navio a leste 100, norte 10.
+O waypoint fica 10 unidades a leste e 1 unidade ao norte do navio.
+
+N3 move o waypoint 3 unidades ao norte, deixando o waypoint em 10 unidades a leste e 4 unidades ao norte do navio. O navio permanece a leste 100, norte 10.
+
+F7 move o navio para o waypoint 7 vezes (um total de 70 unidades leste e 28 unidades norte ), deixando o navio a leste 170, norte 38.
+O waypoint fica 10 unidades a leste e 4 unidades ao norte do navio.
+
+R90 gira o waypoint ao redor do navio 90 graus no sentido horário, movendo-o para 4 unidades a leste e 10 unidades ao sul do navio.
+O navio permanece a leste 170, norte 38.
+
+F11 move o navio para o waypoint 11 vezes (um total de 44 unidades leste e 110 unidades sul ), deixando o navio a leste 214, sul 72.
+O waypoint fica 4 unidades a leste e 10 unidades ao sul do navio.
+
+Após essas operações, a distância de Manhattan do navio à sua posição inicial é 214 + 72 = 286.
+
+Descubra onde as instruções de navegação realmente levam.
+Então, para seu input: Qual é a distância de Manhattan entre esse local e a posição inicial do navio?
