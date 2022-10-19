@@ -4,7 +4,7 @@ with open('input.txt') as f:
 data = data[0]
 
 
-lista = [x for x in range(255)]
+lista = [x for x in range(256)]
 
 
 def inverter_Sublista(idx, comp):
@@ -17,7 +17,7 @@ def inverter_Sublista(idx, comp):
             idx_inicio = idx
             idx_fim = len(lista)
         else:
-            idx_inicio = (idx + comp) - len(lista)
+            idx_inicio = (idx + comp) % len(lista)
             idx_fim = len(lista)
     else:
         idx_fim = idx+comp
