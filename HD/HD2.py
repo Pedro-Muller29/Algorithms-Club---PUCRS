@@ -1,5 +1,7 @@
 with open('input.txt') as f:
     data = [[int(ord(y)) for y in x] for x in f]
+
+
 data = data[0] + [17, 31, 73, 47, 23]
 
 lista = [x for x in range(256)]
@@ -35,9 +37,6 @@ def inverter_Sublista(idx, comp):
 idx = 0
 salto = 0
 for l in range(64):
-    print()
-    print(l)
-    
     for i in data:
         inverter_Sublista(idx, i)
         if i+salto == len(lista):
@@ -45,7 +44,6 @@ for l in range(64):
         else:
             idx = (idx+i+salto) % len(lista)
         salto += 1
-    print(salto)
 
 def xor(listaa):
     tmp = 0
