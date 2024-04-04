@@ -1,4 +1,6 @@
-# cdass
-clube do algoritmo
+# Algorithms Club - PUCRS
+This repo contains some of the exercises i solved as a member of the Algorithms Club of the university PUCRS.
+Some solutions might not be good, but they are from my 1st semester. Unfortunetly i lost the solution from further semesters.
 
-  PROBLEMAS REFERENTES AO CLUBE DE ALGORITMO DA PUCRS. DENTRO DE CADA PASTA PODEM SER ENCONTRADOS OS ENUNCIADOS DOS PROBLEMAS, BEM COMO O CÓDIGO.
+Later on i managed the club, creating problems and helping other members.
+The club website: https://cdass.vercel.app
